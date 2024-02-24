@@ -11,6 +11,10 @@
 		DD28EAD42B8A17B7002801D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAD32B8A17B7002801D0 /* ContentView.swift */; };
 		DD28EAD62B8A17B8002801D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD28EAD52B8A17B8002801D0 /* Assets.xcassets */; };
 		DD28EAD92B8A17B8002801D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD28EAD82B8A17B8002801D0 /* Preview Assets.xcassets */; };
+		DD28EAE12B8A1814002801D0 /* TextFieldFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAE02B8A1814002801D0 /* TextFieldFormView.swift */; };
+		DD28EAE32B8A195E002801D0 /* DateFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAE22B8A195E002801D0 /* DateFormView.swift */; };
+		DD28EAE52B8A1A50002801D0 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAE42B8A1A50002801D0 /* ButtonFormView.swift */; };
+		DD28EAE92B8A1B7B002801D0 /* FormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAE82B8A1B7B002801D0 /* FormItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		DD28EAD32B8A17B7002801D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD28EAD52B8A17B8002801D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD28EAD82B8A17B8002801D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD28EAE02B8A1814002801D0 /* TextFieldFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFormView.swift; sourceTree = "<group>"; };
+		DD28EAE22B8A195E002801D0 /* DateFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormView.swift; sourceTree = "<group>"; };
+		DD28EAE42B8A1A50002801D0 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		DD28EAE82B8A1B7B002801D0 /* FormItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 		DD28EAD02B8A17B7002801D0 /* SwiftFormApp */ = {
 			isa = PBXGroup;
 			children = (
+				DD28EAE62B8A1B53002801D0 /* Form */,
 				DD28EAD12B8A17B7002801D0 /* SwiftFormAppApp.swift */,
 				DD28EAD32B8A17B7002801D0 /* ContentView.swift */,
 				DD28EAD52B8A17B8002801D0 /* Assets.xcassets */,
@@ -65,6 +74,33 @@
 				DD28EAD82B8A17B8002801D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DD28EADF2B8A17F3002801D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD28EAE02B8A1814002801D0 /* TextFieldFormView.swift */,
+				DD28EAE22B8A195E002801D0 /* DateFormView.swift */,
+				DD28EAE42B8A1A50002801D0 /* ButtonFormView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DD28EAE62B8A1B53002801D0 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				DD28EAE72B8A1B6E002801D0 /* Model */,
+				DD28EADF2B8A17F3002801D0 /* Views */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		DD28EAE72B8A1B6E002801D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD28EAE82B8A1B7B002801D0 /* FormItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD28EAD42B8A17B7002801D0 /* ContentView.swift in Sources */,
+				DD28EAE52B8A1A50002801D0 /* ButtonFormView.swift in Sources */,
+				DD28EAE12B8A1814002801D0 /* TextFieldFormView.swift in Sources */,
+				DD28EAE32B8A195E002801D0 /* DateFormView.swift in Sources */,
+				DD28EAE92B8A1B7B002801D0 /* FormItem.swift in Sources */,
 				DD28EAD22B8A17B7002801D0 /* SwiftFormAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
