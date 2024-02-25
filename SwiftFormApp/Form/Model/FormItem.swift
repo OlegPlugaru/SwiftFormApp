@@ -7,12 +7,14 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 // Implementation for a form item
 
 protocol FormItem {
     var id: UUID { get }
     var formId: FormField { get }
+    var validations: [ValidationManager] { get }
     var val: Any? { get }
 }
 
@@ -32,10 +34,13 @@ class FormComponent: FormItem, Identifiable {
     
     let id = UUID()
     let formId: FormField
+    var validations: [ValidationManager]
     var val: Any?
-    
-    init(_ id: FormField) {
+   
+    init(_ id: FormField,
+         validations: [ValidationManager] = []) {
         self.formId = id
+        self.validations = validations
     }
 }
 
@@ -48,10 +53,11 @@ final class TextFormComponent: FormComponent {
     
     init(id: FormField,
          placeholder: String,
-         keyboardType: UIKeyboardType = .default) {
+         keyboardType: UIKeyboardType = .default,
+         validations: [ValidationManager] = []) {
         self.placeholder = placeholder
         self.keyboardType = keyboardType
-        super.init(id)
+        super.init(id, validations: validations)
     }
 }
 
@@ -59,11 +65,13 @@ final class TextFormComponent: FormComponent {
 
 final class DateFormComponent: FormComponent {
     
-    let mode: UIDatePicker.Mode
+    let mode: DatePickerComponents
     
-    init(id: FormField, mode: UIDatePicker.Mode) {
+    init(id: FormField,
+         mode: DatePickerComponents, 
+         validations: [ValidationManager] = []) {
         self.mode = mode
-        super.init(id)
+        super.init(id, validations: validations)
     }
 }
 

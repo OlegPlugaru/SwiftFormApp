@@ -15,6 +15,12 @@
 		DD28EAE32B8A195E002801D0 /* DateFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAE22B8A195E002801D0 /* DateFormView.swift */; };
 		DD28EAE52B8A1A50002801D0 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAE42B8A1A50002801D0 /* ButtonFormView.swift */; };
 		DD28EAE92B8A1B7B002801D0 /* FormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAE82B8A1B7B002801D0 /* FormItem.swift */; };
+		DD47BC2B2B8B63F100CD651A /* FormContentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47BC2A2B8B63F100CD651A /* FormContentBuilder.swift */; };
+		DD47BC2F2B8B6A3600CD651A /* RegexPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47BC2E2B8B6A3600CD651A /* RegexPatterns.swift */; };
+		DD47BC322B8B6B7500CD651A /* RegexFormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47BC312B8B6B7500CD651A /* RegexFormItem.swift */; };
+		DD47BC352B8B6BAB00CD651A /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47BC342B8B6BAB00CD651A /* ValidationError.swift */; };
+		DD47BC382B8B6C6400CD651A /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47BC372B8B6C6400CD651A /* ValidationManager.swift */; };
+		DD47BC3B2B8B804400CD651A /* FormState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47BC3A2B8B804400CD651A /* FormState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,12 @@
 		DD28EAE22B8A195E002801D0 /* DateFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormView.swift; sourceTree = "<group>"; };
 		DD28EAE42B8A1A50002801D0 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		DD28EAE82B8A1B7B002801D0 /* FormItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormItem.swift; sourceTree = "<group>"; };
+		DD47BC2A2B8B63F100CD651A /* FormContentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentBuilder.swift; sourceTree = "<group>"; };
+		DD47BC2E2B8B6A3600CD651A /* RegexPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexPatterns.swift; sourceTree = "<group>"; };
+		DD47BC312B8B6B7500CD651A /* RegexFormItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexFormItem.swift; sourceTree = "<group>"; };
+		DD47BC342B8B6BAB00CD651A /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		DD47BC372B8B6C6400CD651A /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		DD47BC3A2B8B804400CD651A /* FormState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,9 @@
 		DD28EAE62B8A1B53002801D0 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				DD47BC392B8B803900CD651A /* Event */,
+				DD47BC2C2B8B6A1800CD651A /* Regex */,
+				DD47BC292B8B63E400CD651A /* Builder */,
 				DD28EAE72B8A1B6E002801D0 /* Model */,
 				DD28EADF2B8A17F3002801D0 /* Views */,
 			);
@@ -101,6 +116,65 @@
 				DD28EAE82B8A1B7B002801D0 /* FormItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DD47BC292B8B63E400CD651A /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				DD47BC2A2B8B63F100CD651A /* FormContentBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		DD47BC2C2B8B6A1800CD651A /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				DD47BC362B8B6C5500CD651A /* Manager */,
+				DD47BC332B8B6B9400CD651A /* Error */,
+				DD47BC302B8B6B6200CD651A /* Model */,
+				DD47BC2D2B8B6A2500CD651A /* Patterns */,
+			);
+			path = Regex;
+			sourceTree = "<group>";
+		};
+		DD47BC2D2B8B6A2500CD651A /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				DD47BC2E2B8B6A3600CD651A /* RegexPatterns.swift */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
+		DD47BC302B8B6B6200CD651A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD47BC312B8B6B7500CD651A /* RegexFormItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD47BC332B8B6B9400CD651A /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DD47BC342B8B6BAB00CD651A /* ValidationError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		DD47BC362B8B6C5500CD651A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DD47BC372B8B6C6400CD651A /* ValidationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		DD47BC392B8B803900CD651A /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				DD47BC3A2B8B804400CD651A /* FormState.swift */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,10 +247,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD47BC382B8B6C6400CD651A /* ValidationManager.swift in Sources */,
 				DD28EAD42B8A17B7002801D0 /* ContentView.swift in Sources */,
+				DD47BC352B8B6BAB00CD651A /* ValidationError.swift in Sources */,
 				DD28EAE52B8A1A50002801D0 /* ButtonFormView.swift in Sources */,
+				DD47BC2F2B8B6A3600CD651A /* RegexPatterns.swift in Sources */,
 				DD28EAE12B8A1814002801D0 /* TextFieldFormView.swift in Sources */,
 				DD28EAE32B8A195E002801D0 /* DateFormView.swift in Sources */,
+				DD47BC3B2B8B804400CD651A /* FormState.swift in Sources */,
+				DD47BC2B2B8B63F100CD651A /* FormContentBuilder.swift in Sources */,
+				DD47BC322B8B6B7500CD651A /* RegexFormItem.swift in Sources */,
 				DD28EAE92B8A1B7B002801D0 /* FormItem.swift in Sources */,
 				DD28EAD22B8A17B7002801D0 /* SwiftFormAppApp.swift in Sources */,
 			);

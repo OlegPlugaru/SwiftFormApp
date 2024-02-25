@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct ButtonFormView: View {
+    
+    typealias ButttonActionHandler = (_ formId: FormField) -> Void
+    
+    let component: ButtonFormComponent
+    let handler: ButttonActionHandler
+    
+    init(component: ButtonFormComponent, handler: @escaping ButtonFormView.ButttonActionHandler) {
+        self.component = component
+        self.handler = handler
+    }
+    
     var body: some View {
-        Button("Title here") {
-            
+        Button(component.title) {
+            handler(component.formId)
         }
         .frame(maxWidth: .infinity, 
                minHeight: 44,
@@ -23,6 +34,6 @@ struct ButtonFormView: View {
 }
 
 #Preview {
-    ButtonFormView()
+    ButtonFormView(component: .init(id: .submit, title: "title here")) { _ in }
         .padding()
 }
